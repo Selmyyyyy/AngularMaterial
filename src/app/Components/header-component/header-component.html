@@ -7,7 +7,16 @@
   <button routerLink="/list" matIconButton>
     <mat-icon>list</mat-icon>
   </button>
-  <button matIconButton>
-    <mat-icon>share</mat-icon>
+  <button matIconButton (click)="switchMode()">
+    @if (isDarkMode) {
+    <mat-icon>light_mode </mat-icon> 
+  }
+    @else { 
+      <mat-icon>dark_mode</mat-icon>}
+   
   </button>
+<button matIconButton (click)="switchPalette()">
+  <mat-icon>palette</mat-icon>
+</button>
+
 </mat-toolbar>
